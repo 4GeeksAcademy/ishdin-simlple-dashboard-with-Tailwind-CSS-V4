@@ -239,11 +239,11 @@
         <h3 class="font-display text-sm font-semibold">Performance by product</h3>
         <p class="mb-4 text-xs text-ink-faint">Commission generated per product</p>
 
-        <table class="charts-css column show-labels show-primary-axis show-data-on-hover h-40 w-full">
+        <table class="charts-css bar show-labels show-primary-axis show-data-on-hover w-full product-performance-chart">
           <tbody>
             <tr>
               <th scope="row" class="text-xs">A · €50</th>
-              <td style="--size: 0.77; --color: var(--color-ink)"><span class="data font-data text-xs">€1,800</span></td>
+              <td style="--size: 0.77; --color: #BFDCCF"><span class="data font-data text-xs">€1,800</span></td>
             </tr>
             <tr>
               <th scope="row" class="text-xs">B · €120</th>
@@ -347,8 +347,8 @@
               <th class="px-5 py-2.5 font-medium">Price</th>
               <th class="px-5 py-2.5 font-medium">Commission / sale</th>
               <th class="px-5 py-2.5 font-medium">Sales</th>
-              <th class="px-5 py-2.5 font-medium">Revenue</th>
-              <th class="px-5 py-2.5 font-medium">Share of revenue</th>
+              <th class="px-5 py-2.5 font-medium mobile-hide-col">Revenue</th>
+              <th class="px-5 py-2.5 font-medium mobile-hide-col">Share of revenue</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-line-soft">
@@ -357,24 +357,24 @@
               <td class="px-5 py-3 font-data text-ink-soft">€50.00</td>
               <td class="px-5 py-3 font-data text-ink-soft">€7.50</td>
               <td class="px-5 py-3 font-data">240</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">€1,800</td>
-              <td class="px-5 py-3 font-data text-ink-soft">31.9%</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">€1,800</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">31.9%</td>
             </tr>
             <tr>
               <td class="px-5 py-3 font-medium">Product B</td>
               <td class="px-5 py-3 font-data text-ink-soft">€120.00</td>
               <td class="px-5 py-3 font-data text-ink-soft">€18.00</td>
               <td class="px-5 py-3 font-data">130</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">€2,340</td>
-              <td class="px-5 py-3 font-data text-ink-soft">41.5%</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">€2,340</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">41.5%</td>
             </tr>
             <tr>
               <td class="px-5 py-3 font-medium">Product C</td>
               <td class="px-5 py-3 font-data text-ink-soft">€80.00</td>
               <td class="px-5 py-3 font-data text-ink-soft">€12.00</td>
               <td class="px-5 py-3 font-data">125</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">€1,500</td>
-              <td class="px-5 py-3 font-data text-ink-soft">26.6%</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">€1,500</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">26.6%</td>
             </tr>
           </tbody>
         </table>
@@ -391,41 +391,41 @@
           <thead>
             <tr class="border-b border-line-soft text-[11px] uppercase tracking-wide text-ink-faint">
               <th class="px-5 py-2.5 font-medium">Platform</th>
-              <th class="px-5 py-2.5 font-medium">Reach</th>
-              <th class="px-5 py-2.5 font-medium">Engagement</th>
-              <th class="px-5 py-2.5 font-medium">Conversions</th>
+              <th class="px-5 py-2.5 font-medium mobile-hide-col">Reach</th>
+              <th class="px-5 py-2.5 font-medium mobile-hide-col">Engagement</th>
+              <th class="px-5 py-2.5 font-medium mobile-hide-col">Conversions</th>
               <th class="px-5 py-2.5 font-medium">Ad spend</th>
               <th class="px-5 py-2.5 font-medium">Revenue</th>
-              <th class="px-5 py-2.5 font-medium">ROI</th>
+              <th class="px-5 py-2.5 font-medium mobile-hide-col">ROI</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-line-soft">
             <tr>
               <td class="px-5 py-3 font-medium"><span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-instagram"></span>Instagram</span></td>
-              <td class="px-5 py-3 font-data text-ink-soft">210,000</td>
-              <td class="px-5 py-3 font-data text-ink-soft">21.2%</td>
-              <td class="px-5 py-3 font-data">140</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">210,000</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">21.2%</td>
+              <td class="px-5 py-3 font-data mobile-hide-col">140</td>
               <td class="px-5 py-3 font-data text-ink-soft">€600</td>
               <td class="px-5 py-3 font-data font-semibold text-money">€1,920</td>
-              <td class="px-5 py-3 font-data font-semibold">3.20x</td>
+              <td class="px-5 py-3 font-data font-semibold mobile-hide-col">3.20x</td>
             </tr>
             <tr>
               <td class="px-5 py-3 font-medium"><span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-tiktok"></span>TikTok</span></td>
-              <td class="px-5 py-3 font-data text-ink-soft">540,000</td>
-              <td class="px-5 py-3 font-data text-ink-soft">47.9%</td>
-              <td class="px-5 py-3 font-data">260</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">540,000</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">47.9%</td>
+              <td class="px-5 py-3 font-data mobile-hide-col">260</td>
               <td class="px-5 py-3 font-data text-ink-soft">€450</td>
               <td class="px-5 py-3 font-data font-semibold text-money">€2,640</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">5.87x</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">5.87x</td>
             </tr>
             <tr>
               <td class="px-5 py-3 font-medium"><span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-youtube"></span>YouTube</span></td>
-              <td class="px-5 py-3 font-data text-ink-soft">95,000</td>
-              <td class="px-5 py-3 font-data text-ink-soft">16.7%</td>
-              <td class="px-5 py-3 font-data">95</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">95,000</td>
+              <td class="px-5 py-3 font-data text-ink-soft mobile-hide-col">16.7%</td>
+              <td class="px-5 py-3 font-data mobile-hide-col">95</td>
               <td class="px-5 py-3 font-data text-ink-soft">€200</td>
               <td class="px-5 py-3 font-data font-semibold text-money">€1,080</td>
-              <td class="px-5 py-3 font-data font-semibold">5.40x</td>
+              <td class="px-5 py-3 font-data font-semibold mobile-hide-col">5.40x</td>
             </tr>
           </tbody>
         </table>
@@ -443,52 +443,52 @@
             <tr class="border-b border-line-soft text-[11px] uppercase tracking-wide text-ink-faint">
               <th class="px-5 py-2.5 font-medium">Campaign</th>
               <th class="px-5 py-2.5 font-medium">Dates</th>
-              <th class="px-5 py-2.5 font-medium">Product(s)</th>
+              <th class="px-5 py-2.5 font-medium mobile-hide-col">Product(s)</th>
               <th class="px-5 py-2.5 font-medium">Platform(s)</th>
               <th class="px-5 py-2.5 font-medium">Sales</th>
-              <th class="px-5 py-2.5 font-medium">Commission</th>
+              <th class="px-5 py-2.5 font-medium mobile-hide-col">Commission</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-line-soft">
             <tr>
               <td class="px-5 py-3 font-medium">Summer Glow Launch</td>
               <td class="px-5 py-3 text-ink-soft">Jun 15–22</td>
-              <td class="px-5 py-3 text-ink-soft">Product B</td>
+              <td class="px-5 py-3 text-ink-soft mobile-hide-col">Product B</td>
               <td class="px-5 py-3 text-ink-soft">Instagram, TikTok</td>
               <td class="px-5 py-3 font-data">85</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">€1,320</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">€1,320</td>
             </tr>
             <tr>
               <td class="px-5 py-3 font-medium">Back to Basics Bundle</td>
               <td class="px-5 py-3 text-ink-soft">Jun 1–10</td>
-              <td class="px-5 py-3 text-ink-soft">Product A</td>
+              <td class="px-5 py-3 text-ink-soft mobile-hide-col">Product A</td>
               <td class="px-5 py-3 text-ink-soft">TikTok</td>
               <td class="px-5 py-3 font-data">120</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">€900</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">€900</td>
             </tr>
             <tr>
               <td class="px-5 py-3 font-medium">Flash Discount Weekend</td>
               <td class="px-5 py-3 text-ink-soft">Jul 5–7</td>
-              <td class="px-5 py-3 text-ink-soft">Products A, C</td>
+              <td class="px-5 py-3 text-ink-soft mobile-hide-col">Products A, C</td>
               <td class="px-5 py-3 text-ink-soft">TikTok, Instagram</td>
               <td class="px-5 py-3 font-data">95</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">€1,140</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">€1,140</td>
             </tr>
             <tr>
               <td class="px-5 py-3 font-medium">Unboxing Series</td>
               <td class="px-5 py-3 text-ink-soft">Jul 1–13</td>
-              <td class="px-5 py-3 text-ink-soft">Product B</td>
+              <td class="px-5 py-3 text-ink-soft mobile-hide-col">Product B</td>
               <td class="px-5 py-3 text-ink-soft">YouTube, Instagram</td>
               <td class="px-5 py-3 font-data">42</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">€756</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">€756</td>
             </tr>
             <tr>
               <td class="px-5 py-3 font-medium">Deep Dive Review</td>
               <td class="px-5 py-3 text-ink-soft">Jun 20–30</td>
-              <td class="px-5 py-3 text-ink-soft">Product C</td>
+              <td class="px-5 py-3 text-ink-soft mobile-hide-col">Product C</td>
               <td class="px-5 py-3 text-ink-soft">YouTube</td>
               <td class="px-5 py-3 font-data">58</td>
-              <td class="px-5 py-3 font-data font-semibold text-money">€696</td>
+              <td class="px-5 py-3 font-data font-semibold text-money mobile-hide-col">€696</td>
             </tr>
           </tbody>
         </table>

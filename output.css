@@ -1699,6 +1699,34 @@ ol.charts-css li,ul.charts-css li {
 .charts-css.area:not(.reverse-data) tbody,.charts-css.area:not(.reverse-datasets) tbody tr,.charts-css.bar.reverse-datasets.stacked.reverse tbody tr,.charts-css.bar:not(.reverse-datasets).stacked:not(.reverse) tbody tr,.charts-css.column.reverse-labels.reverse-data tbody,.charts-css.column:not(.reverse-datasets):not(.stacked) tbody tr,.charts-css.column:not(.reverse-labels):not(.reverse-data) tbody,.charts-css.line:not(.reverse-data) tbody,.charts-css.line:not(.reverse-datasets) tbody tr {
   flex-direction: row;
 }
+
+/* Keep the product chart visually compact on desktop while preserving readability. */
+.product-performance-chart {
+  --labels-size: 88px;
+  height: 10rem;
+}
+
+.product-performance-chart tbody tr td {
+  padding-block-start: 6px;
+  padding-block-end: 6px;
+  border-radius: 9999px;
+}
+
+.mobile-hide-col {
+  display: none;
+}
+
+@media (width >= 40rem) {
+  .mobile-hide-col {
+    display: table-cell;
+  }
+}
+
+@media (width >= 64rem) {
+  .product-performance-chart {
+    height: 10rem;
+  }
+}
 .charts-css.area.reverse-data tbody,.charts-css.area.reverse-datasets tbody tr,.charts-css.bar.reverse-datasets.stacked:not(.reverse) tbody tr,.charts-css.bar:not(.reverse-datasets).stacked.reverse tbody tr,.charts-css.column.reverse-datasets:not(.stacked) tbody tr,.charts-css.column.reverse-labels:not(.reverse-data) tbody,.charts-css.column:not(.reverse-labels).reverse-data tbody,.charts-css.line.reverse-data tbody,.charts-css.line.reverse-datasets tbody tr {
   flex-direction: row-reverse;
 }
