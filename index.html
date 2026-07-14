@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator Commission Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-paper text-ink font-body antialiased">
+
+<!-- ============================================================ -->
+<!-- TOP BAR                                                        -->
+<!-- ============================================================ -->
+<header class="sticky top-0 z-30 border-b border-line bg-paper/95 backdrop-blur">
+  <div class="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap items-center justify-between gap-3 py-4">
+      <div class="flex items-center gap-3">
+        <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-ink font-display text-sm font-semibold text-paper">MB</div>
+        <div>
+          <p class="font-display text-sm font-semibold leading-tight">Maya Bloom</p>
+          <p class="text-xs text-ink-faint leading-tight">Creator commission report</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 text-xs">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-money-soft px-3 py-1.5 font-medium text-money">
+          <span class="h-1.5 w-1.5 rounded-full bg-money"></span> Data current as of Jul 13, 2026
+        </span>
+        <span class="hidden rounded-full border border-line px-3 py-1.5 font-medium text-ink-soft sm:inline-flex">Period: Last 30 days</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="mx-auto max-w-[1400px] px-4 pb-20 sm:px-6 lg:px-8">
+
+  <!-- ============================================================ -->
+  <!-- HERO KPI — the one number that matters most                   -->
+  <!-- ============================================================ -->
+  <section aria-labelledby="hero-heading" class="pt-8">
+    <div class="rounded-2xl border border-line bg-ink px-6 py-8 text-paper sm:px-10 sm:py-10">
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p id="hero-heading" class="font-display text-xs font-semibold uppercase tracking-[0.18em] text-paper/60">Total commission earned · last 30 days</p>
+          <p class="mt-3 font-display text-5xl font-semibold tabular-nums sm:text-6xl">€5,640</p>
+          <p class="mt-3 flex items-center gap-2 text-sm text-paper/70">
+            <span class="inline-flex items-center gap-1 rounded-full bg-money/20 px-2.5 py-1 font-data text-xs font-semibold text-emerald-300">▲ 14.2%</span>
+            vs. previous 30 days (€4,938)
+          </p>
+        </div>
+
+        <!-- CSS-only sparkline via charts.css line chart -->
+        <div class="w-full max-w-xs">
+          <p class="mb-2 text-xs font-medium text-paper/60">Daily commission, last 14 days</p>
+          <table class="charts-css line show-primary-axis h-16 w-full [--color:var(--color-money)]">
+            <tbody>
+              <tr><td style="--size: .48"></td></tr>
+              <tr><td style="--size: .40"></td></tr>
+              <tr><td style="--size: .55"></td></tr>
+              <tr><td style="--size: .60"></td></tr>
+              <tr><td style="--size: .50"></td></tr>
+              <tr><td style="--size: .66"></td></tr>
+              <tr><td style="--size: .58"></td></tr>
+              <tr><td style="--size: .70"></td></tr>
+              <tr><td style="--size: .64"></td></tr>
+              <tr><td style="--size: .78"></td></tr>
+              <tr><td style="--size: .72"></td></tr>
+              <tr><td style="--size: .86"></td></tr>
+              <tr><td style="--size: .80"></td></tr>
+              <tr><td style="--size: .94"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 1) KPI BLOCK — grouped by outcome category                    -->
+  <!-- ============================================================ -->
+  <section aria-labelledby="kpi-heading" class="mt-10">
+    <div class="mb-4 flex items-baseline justify-between">
+      <h2 id="kpi-heading" class="font-display text-lg font-semibold">Outcome indicators</h2>
+      <p class="text-xs text-ink-faint">All figures reflect the last 30 days</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
+
+      <!-- Volume -->
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-ink-faint">Volume</p>
+        <p class="mt-2 font-data text-2xl font-semibold tabular-nums">495</p>
+        <p class="text-xs text-ink-soft">sales this period</p>
+        <p class="mt-2 text-xs text-ink-faint">1,790,000 impr. · 18,600 active users</p>
+      </div>
+
+      <!-- Revenue -->
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-ink-faint">Revenue</p>
+        <p class="mt-2 font-data text-2xl font-semibold tabular-nums text-money">€5,640</p>
+        <p class="text-xs text-ink-soft">commission earned</p>
+        <p class="mt-2 text-xs text-ink-faint">+€340 MRR · €75.96 avg. order</p>
+      </div>
+
+      <!-- Engagement -->
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-ink-faint">Engagement</p>
+        <p class="mt-2 font-data text-2xl font-semibold tabular-nums">37.7%</p>
+        <p class="text-xs text-ink-soft">engagement rate</p>
+        <p class="mt-2 text-xs text-ink-faint">318,770 interactions</p>
+      </div>
+
+      <!-- Retention -->
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-ink-faint">Retention</p>
+        <p class="mt-2 font-data text-2xl font-semibold tabular-nums">79.8%</p>
+        <p class="text-xs text-ink-soft">checkout completion</p>
+        <p class="mt-2 text-xs text-ink-faint">4.2% churn · 18% repeat buyers</p>
+      </div>
+
+      <!-- Performance -->
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-ink-faint">Performance</p>
+        <p class="mt-2 font-data text-2xl font-semibold tabular-nums">1.23%</p>
+        <p class="text-xs text-ink-soft">conversion rate (clicks)</p>
+        <p class="mt-2 text-xs text-ink-faint">2.26% CTR · 495 conversions</p>
+      </div>
+
+      <!-- Satisfaction -->
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-ink-faint">Satisfaction</p>
+        <p class="mt-2 font-data text-2xl font-semibold tabular-nums">62</p>
+        <p class="text-xs text-ink-soft">NPS score</p>
+        <p class="mt-2 text-xs text-ink-faint">CSAT 4.6 / 5</p>
+      </div>
+
+      <!-- Efficiency -->
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-ink-faint">Efficiency</p>
+        <p class="mt-2 font-data text-2xl font-semibold tabular-nums">€2.53</p>
+        <p class="text-xs text-ink-soft">cost per sale</p>
+        <p class="mt-2 text-xs text-ink-faint">77.8% margin · 6.4h to first sale</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 2) DRIVERS BLOCK                                               -->
+  <!-- ============================================================ -->
+  <section aria-labelledby="drivers-heading" class="mt-12">
+    <div class="mb-4 flex items-baseline justify-between">
+      <h2 id="drivers-heading" class="font-display text-lg font-semibold">Drivers</h2>
+      <p class="text-xs text-ink-faint">What's shaping the outcomes above</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+
+      <!-- Funnel -->
+      <article class="rounded-xl border border-line bg-panel p-5">
+        <h3 class="font-display text-sm font-semibold">Conversion by stage</h3>
+        <p class="mb-4 text-xs text-ink-faint">Impressions → Reach → Clicks → Checkout → Purchase</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-center gap-3">
+            <span class="w-24 shrink-0 text-xs text-ink-soft">Impressions</span>
+            <span class="h-6 rounded bg-ink" style="width:100%"></span>
+            <span class="w-20 shrink-0 text-right font-data text-xs tabular-nums">1,790,000</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-24 shrink-0 text-xs text-ink-soft">Reach</span>
+            <span class="h-6 rounded bg-ink/80" style="width:47%"></span>
+            <span class="w-20 shrink-0 text-right font-data text-xs tabular-nums">845,000</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-24 shrink-0 text-xs text-ink-soft">Clicks</span>
+            <span class="h-6 rounded bg-ink/60" style="width:5%"></span>
+            <span class="w-20 shrink-0 text-right font-data text-xs tabular-nums">40,400</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-24 shrink-0 text-xs text-ink-soft">Checkout</span>
+            <span class="h-6 rounded bg-money/70" style="width:1.6%; min-width:6px"></span>
+            <span class="w-20 shrink-0 text-right font-data text-xs tabular-nums">620</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-24 shrink-0 text-xs text-ink-soft">Purchase</span>
+            <span class="h-6 rounded bg-money" style="width:1.3%; min-width:6px"></span>
+            <span class="w-20 shrink-0 text-right font-data text-xs tabular-nums">495</span>
+          </li>
+        </ul>
+        <p class="mt-3 text-xs text-ink-faint">Biggest drop-off: reach → clicks (95.2%). Checkout → purchase holds steady at 79.8%.</p>
+      </article>
+
+      <!-- Performance by platform -->
+      <article class="rounded-xl border border-line bg-panel p-5">
+        <h3 class="font-display text-sm font-semibold">Performance by platform</h3>
+        <p class="mb-4 text-xs text-ink-faint">Return on ad spend (revenue ÷ cost)</p>
+
+        <table class="charts-css bar show-labels show-primary-axis show-data-on-hover h-40 w-full">
+          <tbody>
+            <tr>
+              <th scope="row" class="text-xs">Instagram</th>
+              <td style="--size: 0.55; --color: var(--color-instagram)"><span class="data font-data text-xs">3.20x</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-xs">TikTok</th>
+              <td style="--size: 1; --color: var(--color-tiktok)"><span class="data font-data text-xs">5.87x</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-xs">YouTube</th>
+              <td style="--size: 0.92; --color: var(--color-youtube)"><span class="data font-data text-xs">5.40x</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+          <div class="rounded-lg bg-instagram-soft p-2">
+            <p class="text-[10px] font-semibold uppercase text-instagram">Instagram</p>
+            <p class="font-data text-sm font-semibold">€1,920</p>
+            <p class="text-[10px] text-ink-faint">on €600 spend</p>
+          </div>
+          <div class="rounded-lg bg-tiktok-soft p-2">
+            <p class="text-[10px] font-semibold uppercase text-tiktok">TikTok</p>
+            <p class="font-data text-sm font-semibold">€2,640</p>
+            <p class="text-[10px] text-ink-faint">on €450 spend</p>
+          </div>
+          <div class="rounded-lg bg-youtube-soft p-2">
+            <p class="text-[10px] font-semibold uppercase text-youtube">YouTube</p>
+            <p class="font-data text-sm font-semibold">€1,080</p>
+            <p class="text-[10px] text-ink-faint">on €200 spend</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Performance by product -->
+      <article class="rounded-xl border border-line bg-panel p-5">
+        <h3 class="font-display text-sm font-semibold">Performance by product</h3>
+        <p class="mb-4 text-xs text-ink-faint">Commission generated per product</p>
+
+        <table class="charts-css column show-labels show-primary-axis show-data-on-hover h-40 w-full">
+          <tbody>
+            <tr>
+              <th scope="row" class="text-xs">A · €50</th>
+              <td style="--size: 0.77; --color: var(--color-ink)"><span class="data font-data text-xs">€1,800</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-xs">B · €120</th>
+              <td style="--size: 1; --color: var(--color-money)"><span class="data font-data text-xs">€2,340</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-xs">C · €80</th>
+              <td style="--size: 0.64; --color: var(--color-ink-faint)"><span class="data font-data text-xs">€1,500</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="mt-3 text-xs text-ink-faint">Product B drives the most revenue per sale (€18 commission); Product A drives the most volume (240 sales).</p>
+      </article>
+
+      <!-- Activity & engagement by platform -->
+      <article class="rounded-xl border border-line bg-panel p-5">
+        <h3 class="font-display text-sm font-semibold">Activity &amp; engagement</h3>
+        <p class="mb-4 text-xs text-ink-faint">Posts published and engagement rate by platform</p>
+
+        <ul class="divide-y divide-line-soft text-sm">
+          <li class="flex items-center justify-between py-2.5">
+            <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-instagram"></span>Instagram</span>
+            <span class="text-ink-faint">24 posts</span>
+            <span class="font-data font-semibold">21.2%</span>
+          </li>
+          <li class="flex items-center justify-between py-2.5">
+            <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-tiktok"></span>TikTok</span>
+            <span class="text-ink-faint">40 posts</span>
+            <span class="font-data font-semibold">47.9%</span>
+          </li>
+          <li class="flex items-center justify-between py-2.5">
+            <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-youtube"></span>YouTube</span>
+            <span class="text-ink-faint">8 posts</span>
+            <span class="font-data font-semibold">16.7%</span>
+          </li>
+        </ul>
+        <p class="mt-2 text-xs text-ink-faint">258,500 total interactions on TikTok (likes, comments, shares, saves) — nearly 5× Instagram's volume from 40 posts.</p>
+      </article>
+
+      <!-- Quality -->
+      <article class="rounded-xl border border-line bg-panel p-5 lg:col-span-2">
+        <h3 class="font-display text-sm font-semibold">Quality</h3>
+        <p class="mb-4 text-xs text-ink-faint">How well traffic converts once it lands</p>
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div class="rounded-lg border border-line-soft p-3">
+            <p class="text-xs text-ink-soft">Qualified click rate</p>
+            <p class="font-data text-xl font-semibold">79.9%</p>
+            <p class="text-[11px] text-ink-faint">clicks that reach the product page</p>
+          </div>
+          <div class="rounded-lg border border-line-soft p-3">
+            <p class="text-xs text-ink-soft">Live event attendance</p>
+            <p class="font-data text-xl font-semibold">64%</p>
+            <p class="text-[11px] text-ink-faint">of RSVPs who joined live shopping drops</p>
+          </div>
+          <div class="rounded-lg border border-line-soft p-3">
+            <p class="text-xs text-ink-soft">Promo code redemption</p>
+            <p class="font-data text-xl font-semibold">71%</p>
+            <p class="text-[11px] text-ink-faint">of issued codes used at checkout</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 3) OPERATIONAL DETAILS BLOCK                                   -->
+  <!-- ============================================================ -->
+  <section aria-labelledby="ops-heading" class="mt-12">
+    <div class="mb-4 flex items-baseline justify-between">
+      <h2 id="ops-heading" class="font-display text-lg font-semibold">Operational details</h2>
+      <p class="text-xs text-ink-faint">Tables, alerts, and where to focus next</p>
+    </div>
+
+    <!-- Alerts -->
+    <div class="mb-6 grid grid-cols-1 gap-2 sm:grid-cols-3" role="region" aria-label="Alerts">
+      <div class="flex items-start gap-2 rounded-lg border border-alert/30 bg-alert-soft p-3">
+        <span aria-hidden="true" class="mt-0.5 text-alert">▼</span>
+        <p class="text-xs text-ink"><span class="font-semibold">TikTok CVR down 18%</span> vs. last week — check for a broken link or offer fatigue.</p>
+      </div>
+      <div class="flex items-start gap-2 rounded-lg border border-money/30 bg-money-soft p-3">
+        <span aria-hidden="true" class="mt-0.5 text-money">▲</span>
+        <p class="text-xs text-ink"><span class="font-semibold">Instagram engagement +32%</span> after the Jul 5 post — consider a follow-up.</p>
+      </div>
+      <div class="flex items-start gap-2 rounded-lg border border-warn/30 bg-warn-soft p-3">
+        <span aria-hidden="true" class="mt-0.5 text-warn">!</span>
+        <p class="text-xs text-ink"><span class="font-semibold">YouTube CTR down 9%</span> — thumbnail or CTA may need refreshing.</p>
+      </div>
+    </div>
+
+    <!-- Products table -->
+    <div class="mb-6 overflow-hidden rounded-xl border border-line bg-panel">
+      <div class="border-b border-line-soft px-5 py-3">
+        <h3 class="font-display text-sm font-semibold">Products</h3>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-line-soft text-[11px] uppercase tracking-wide text-ink-faint">
+              <th class="px-5 py-2.5 font-medium">Product</th>
+              <th class="px-5 py-2.5 font-medium">Price</th>
+              <th class="px-5 py-2.5 font-medium">Commission / sale</th>
+              <th class="px-5 py-2.5 font-medium">Sales</th>
+              <th class="px-5 py-2.5 font-medium">Revenue</th>
+              <th class="px-5 py-2.5 font-medium">Share of revenue</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line-soft">
+            <tr>
+              <td class="px-5 py-3 font-medium">Product A</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€50.00</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€7.50</td>
+              <td class="px-5 py-3 font-data">240</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€1,800</td>
+              <td class="px-5 py-3 font-data text-ink-soft">31.9%</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Product B</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€120.00</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€18.00</td>
+              <td class="px-5 py-3 font-data">130</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€2,340</td>
+              <td class="px-5 py-3 font-data text-ink-soft">41.5%</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Product C</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€80.00</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€12.00</td>
+              <td class="px-5 py-3 font-data">125</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€1,500</td>
+              <td class="px-5 py-3 font-data text-ink-soft">26.6%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Platforms table -->
+    <div class="mb-6 overflow-hidden rounded-xl border border-line bg-panel">
+      <div class="border-b border-line-soft px-5 py-3">
+        <h3 class="font-display text-sm font-semibold">Platforms</h3>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-line-soft text-[11px] uppercase tracking-wide text-ink-faint">
+              <th class="px-5 py-2.5 font-medium">Platform</th>
+              <th class="px-5 py-2.5 font-medium">Reach</th>
+              <th class="px-5 py-2.5 font-medium">Engagement</th>
+              <th class="px-5 py-2.5 font-medium">Conversions</th>
+              <th class="px-5 py-2.5 font-medium">Ad spend</th>
+              <th class="px-5 py-2.5 font-medium">Revenue</th>
+              <th class="px-5 py-2.5 font-medium">ROI</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line-soft">
+            <tr>
+              <td class="px-5 py-3 font-medium"><span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-instagram"></span>Instagram</span></td>
+              <td class="px-5 py-3 font-data text-ink-soft">210,000</td>
+              <td class="px-5 py-3 font-data text-ink-soft">21.2%</td>
+              <td class="px-5 py-3 font-data">140</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€600</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€1,920</td>
+              <td class="px-5 py-3 font-data font-semibold">3.20x</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium"><span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-tiktok"></span>TikTok</span></td>
+              <td class="px-5 py-3 font-data text-ink-soft">540,000</td>
+              <td class="px-5 py-3 font-data text-ink-soft">47.9%</td>
+              <td class="px-5 py-3 font-data">260</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€450</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€2,640</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">5.87x</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium"><span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-youtube"></span>YouTube</span></td>
+              <td class="px-5 py-3 font-data text-ink-soft">95,000</td>
+              <td class="px-5 py-3 font-data text-ink-soft">16.7%</td>
+              <td class="px-5 py-3 font-data">95</td>
+              <td class="px-5 py-3 font-data text-ink-soft">€200</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€1,080</td>
+              <td class="px-5 py-3 font-data font-semibold">5.40x</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Campaigns table -->
+    <div class="mb-6 overflow-hidden rounded-xl border border-line bg-panel">
+      <div class="border-b border-line-soft px-5 py-3">
+        <h3 class="font-display text-sm font-semibold">Campaigns</h3>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-line-soft text-[11px] uppercase tracking-wide text-ink-faint">
+              <th class="px-5 py-2.5 font-medium">Campaign</th>
+              <th class="px-5 py-2.5 font-medium">Dates</th>
+              <th class="px-5 py-2.5 font-medium">Product(s)</th>
+              <th class="px-5 py-2.5 font-medium">Platform(s)</th>
+              <th class="px-5 py-2.5 font-medium">Sales</th>
+              <th class="px-5 py-2.5 font-medium">Commission</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line-soft">
+            <tr>
+              <td class="px-5 py-3 font-medium">Summer Glow Launch</td>
+              <td class="px-5 py-3 text-ink-soft">Jun 15–22</td>
+              <td class="px-5 py-3 text-ink-soft">Product B</td>
+              <td class="px-5 py-3 text-ink-soft">Instagram, TikTok</td>
+              <td class="px-5 py-3 font-data">85</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€1,320</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Back to Basics Bundle</td>
+              <td class="px-5 py-3 text-ink-soft">Jun 1–10</td>
+              <td class="px-5 py-3 text-ink-soft">Product A</td>
+              <td class="px-5 py-3 text-ink-soft">TikTok</td>
+              <td class="px-5 py-3 font-data">120</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€900</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Flash Discount Weekend</td>
+              <td class="px-5 py-3 text-ink-soft">Jul 5–7</td>
+              <td class="px-5 py-3 text-ink-soft">Products A, C</td>
+              <td class="px-5 py-3 text-ink-soft">TikTok, Instagram</td>
+              <td class="px-5 py-3 font-data">95</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€1,140</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Unboxing Series</td>
+              <td class="px-5 py-3 text-ink-soft">Jul 1–13</td>
+              <td class="px-5 py-3 text-ink-soft">Product B</td>
+              <td class="px-5 py-3 text-ink-soft">YouTube, Instagram</td>
+              <td class="px-5 py-3 font-data">42</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€756</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Deep Dive Review</td>
+              <td class="px-5 py-3 text-ink-soft">Jun 20–30</td>
+              <td class="px-5 py-3 text-ink-soft">Product C</td>
+              <td class="px-5 py-3 text-ink-soft">YouTube</td>
+              <td class="px-5 py-3 font-data">58</td>
+              <td class="px-5 py-3 font-data font-semibold text-money">€696</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Ranked lists -->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <h3 class="mb-3 font-display text-xs font-semibold uppercase tracking-wide text-ink-faint">Top products</h3>
+        <ol class="space-y-2 text-sm">
+          <li class="flex items-center justify-between"><span>1. Product B</span><span class="font-data font-semibold text-money">€2,340</span></li>
+          <li class="flex items-center justify-between"><span>2. Product A</span><span class="font-data font-semibold text-money">€1,800</span></li>
+          <li class="flex items-center justify-between"><span>3. Product C</span><span class="font-data font-semibold text-money">€1,500</span></li>
+        </ol>
+      </div>
+
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <h3 class="mb-3 font-display text-xs font-semibold uppercase tracking-wide text-ink-faint">Top platforms</h3>
+        <ol class="space-y-2 text-sm">
+          <li class="flex items-center justify-between"><span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-tiktok"></span>1. TikTok</span><span class="font-data font-semibold">5.87x</span></li>
+          <li class="flex items-center justify-between"><span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-youtube"></span>2. YouTube</span><span class="font-data font-semibold">5.40x</span></li>
+          <li class="flex items-center justify-between"><span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-instagram"></span>3. Instagram</span><span class="font-data font-semibold">3.20x</span></li>
+        </ol>
+      </div>
+
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <h3 class="mb-3 font-display text-xs font-semibold uppercase tracking-wide text-ink-faint">Top campaigns</h3>
+        <ol class="space-y-2 text-sm">
+          <li class="flex items-center justify-between"><span>1. Summer Glow</span><span class="font-data font-semibold text-money">€1,320</span></li>
+          <li class="flex items-center justify-between"><span>2. Flash Discount</span><span class="font-data font-semibold text-money">€1,140</span></li>
+          <li class="flex items-center justify-between"><span>3. Back to Basics</span><span class="font-data font-semibold text-money">€900</span></li>
+        </ol>
+      </div>
+
+      <div class="rounded-xl border border-line bg-panel p-4">
+        <h3 class="mb-3 font-display text-xs font-semibold uppercase tracking-wide text-ink-faint">Improvement opportunities</h3>
+        <ul class="space-y-2 text-xs text-ink-soft">
+          <li class="flex gap-1.5"><span aria-hidden="true">·</span>Instagram ROI trails the other two — reconsider ad spend split.</li>
+          <li class="flex gap-1.5"><span aria-hidden="true">·</span>Checkout completion is 80% — recover drop-off with a reminder.</li>
+          <li class="flex gap-1.5"><span aria-hidden="true">·</span>YouTube converts best per click — test more long-form reviews.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="border-t border-line py-6">
+  <p class="mx-auto max-w-[1400px] px-4 text-center text-xs text-ink-faint sm:px-6 lg:px-8">Sample data for illustration · Built with HTML, Tailwind CSS v4 and Charts.css</p>
+</footer>
+
+</body>
+</html>
